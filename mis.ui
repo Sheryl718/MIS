@@ -59,7 +59,7 @@ rgb(255, 255, 255)
           <property name="geometry">
            <rect>
             <x>150</x>
-            <y>90</y>
+            <y>80</y>
             <width>160</width>
             <height>16</height>
            </rect>
@@ -75,7 +75,7 @@ rgb(255, 255, 255)
           <property name="geometry">
            <rect>
             <x>150</x>
-            <y>60</y>
+            <y>50</y>
             <width>160</width>
             <height>16</height>
            </rect>
@@ -94,7 +94,7 @@ rgb(255, 255, 255)
           <property name="geometry">
            <rect>
             <x>80</x>
-            <y>60</y>
+            <y>50</y>
             <width>61</width>
             <height>22</height>
            </rect>
@@ -109,10 +109,10 @@ rgb(255, 255, 255)
          <widget class="QLabel" name="label">
           <property name="geometry">
            <rect>
-            <x>11</x>
-            <y>55</y>
+            <x>1</x>
+            <y>35</y>
             <width>71</width>
-            <height>31</height>
+            <height>41</height>
            </rect>
           </property>
           <property name="text">
@@ -138,23 +138,23 @@ rgb(255, 255, 255)
          <widget class="QLabel" name="label_alpha">
           <property name="geometry">
            <rect>
-            <x>11</x>
-            <y>150</y>
-            <width>71</width>
-            <height>21</height>
+            <x>1</x>
+            <y>130</y>
+            <width>81</width>
+            <height>31</height>
            </rect>
           </property>
           <property name="text">
-           <string>alpha:     </string>
+           <string> alpha:     </string>
           </property>
          </widget>
          <widget class="QLabel" name="label_gamma">
           <property name="geometry">
            <rect>
-            <x>11</x>
-            <y>90</y>
-            <width>71</width>
-            <height>21</height>
+            <x>1</x>
+            <y>70</y>
+            <width>81</width>
+            <height>31</height>
            </rect>
           </property>
           <property name="text">
@@ -178,7 +178,7 @@ rgb(255, 255, 255)
           <property name="geometry">
            <rect>
             <x>83</x>
-            <y>150</y>
+            <y>140</y>
             <width>59</width>
             <height>23</height>
            </rect>
@@ -197,7 +197,7 @@ rgb(255, 255, 255)
           <property name="geometry">
            <rect>
             <x>80</x>
-            <y>90</y>
+            <y>80</y>
             <width>59</width>
             <height>23</height>
            </rect>
@@ -225,10 +225,10 @@ rgb(255, 255, 255)
          <widget class="QLabel" name="label_2">
           <property name="geometry">
            <rect>
-            <x>160</x>
-            <y>150</y>
+            <x>170</x>
+            <y>130</y>
             <width>61</width>
-            <height>21</height>
+            <height>31</height>
            </rect>
           </property>
           <property name="text">
@@ -238,8 +238,8 @@ rgb(255, 255, 255)
          <widget class="QDoubleSpinBox" name="sigma_spin">
           <property name="geometry">
            <rect>
-            <x>220</x>
-            <y>150</y>
+            <x>230</x>
+            <y>140</y>
             <width>61</width>
             <height>21</height>
            </rect>
@@ -248,21 +248,21 @@ rgb(255, 255, 255)
          <widget class="QLabel" name="label_3">
           <property name="geometry">
            <rect>
-            <x>10</x>
-            <y>120</y>
-            <width>51</width>
-            <height>21</height>
+            <x>0</x>
+            <y>100</y>
+            <width>61</width>
+            <height>31</height>
            </rect>
           </property>
           <property name="text">
-           <string>ksize:</string>
+           <string> ksize:</string>
           </property>
          </widget>
          <widget class="QSpinBox" name="ksize_spin">
           <property name="geometry">
            <rect>
             <x>80</x>
-            <y>120</y>
+            <y>110</y>
             <width>61</width>
             <height>21</height>
            </rect>
@@ -281,7 +281,7 @@ rgb(255, 255, 255)
           <property name="geometry">
            <rect>
             <x>150</x>
-            <y>120</y>
+            <y>110</y>
             <width>160</width>
             <height>16</height>
            </rect>
@@ -418,6 +418,99 @@ background-color: rgb(0, 255, 255);
      <addaction name="separator"/>
      <addaction name="actionthreshold_to_zero_inverted"/>
     </widget>
+    <widget class="QMenu" name="menuImage_preproceing">
+     <property name="title">
+      <string>Image preproceing</string>
+     </property>
+     <widget class="QMenu" name="menutransform_color_space_2">
+      <property name="title">
+       <string>transform color space</string>
+      </property>
+      <addaction name="actionBGR2GRAY_2"/>
+     </widget>
+     <widget class="QMenu" name="menumorphological_operation_2">
+      <property name="title">
+       <string>morphological operation</string>
+      </property>
+      <addaction name="actionerode_2"/>
+      <addaction name="separator"/>
+      <addaction name="actiondilate"/>
+      <addaction name="separator"/>
+      <addaction name="actionopen_2"/>
+      <addaction name="separator"/>
+      <addaction name="actionclose_2"/>
+      <addaction name="separator"/>
+      <addaction name="actionmorphological_gradient_2"/>
+      <addaction name="separator"/>
+      <addaction name="actiontop_hat_2"/>
+      <addaction name="separator"/>
+      <addaction name="actionblack_hat_2"/>
+     </widget>
+     <widget class="QMenu" name="menuimage_pyramid_2">
+      <property name="title">
+       <string>image pyramid</string>
+      </property>
+      <addaction name="actionpyrDown_2"/>
+      <addaction name="separator"/>
+      <addaction name="actionpyrUp_2"/>
+     </widget>
+     <widget class="QMenu" name="menuconvolution_operation_2">
+      <property name="title">
+       <string>convolution operation</string>
+      </property>
+      <addaction name="actionrobert"/>
+      <addaction name="separator"/>
+      <addaction name="actionsobel"/>
+      <addaction name="separator"/>
+      <addaction name="actionlaplace_2"/>
+      <addaction name="separator"/>
+      <addaction name="actioncustomConvolution"/>
+      <addaction name="separator"/>
+      <addaction name="actionmask_3"/>
+      <addaction name="separator"/>
+      <addaction name="actioncustomImproveBC"/>
+     </widget>
+     <widget class="QMenu" name="menuedge_detection_2">
+      <property name="title">
+       <string>edge detection</string>
+      </property>
+      <addaction name="actioncanny_2"/>
+      <addaction name="separator"/>
+      <addaction name="actionedge_sobel"/>
+      <addaction name="separator"/>
+      <addaction name="actionscharr"/>
+      <addaction name="separator"/>
+      <addaction name="actionedge_laplace_2"/>
+     </widget>
+     <widget class="QMenu" name="menuchange_pixels_2">
+      <property name="title">
+       <string>change pixels</string>
+      </property>
+      <addaction name="actionwhite2black_2"/>
+     </widget>
+     <addaction name="menuchange_pixels_2"/>
+     <addaction name="separator"/>
+     <addaction name="menutransform_color_space_2"/>
+     <addaction name="separator"/>
+     <addaction name="actiondistanceTransform"/>
+     <addaction name="separator"/>
+     <addaction name="actionnormalize_2"/>
+     <addaction name="separator"/>
+     <addaction name="menumorphological_operation_2"/>
+     <addaction name="separator"/>
+     <addaction name="actioncontours_2"/>
+     <addaction name="separator"/>
+     <addaction name="menuimage_pyramid_2"/>
+     <addaction name="separator"/>
+     <addaction name="menuconvolution_operation_2"/>
+     <addaction name="separator"/>
+     <addaction name="menuedge_detection_2"/>
+     <addaction name="separator"/>
+     <addaction name="actionconvertScaleAbs_2"/>
+     <addaction name="separator"/>
+    </widget>
+    <addaction name="menuImage_preproceing"/>
+    <addaction name="separator"/>
     <addaction name="menuthreshold"/>
     <addaction name="separator"/>
     <addaction name="actionwatershed"/>
@@ -427,123 +520,6 @@ background-color: rgb(0, 255, 255);
      <string>About</string>
     </property>
     <addaction name="actionabout"/>
-   </widget>
-   <widget class="QMenu" name="menuPreprocessing">
-    <property name="title">
-     <string>Image preprocessing</string>
-    </property>
-    <widget class="QMenu" name="menuimprove_brightness_and_contrast">
-     <property name="title">
-      <string>improve brightness and contrast</string>
-     </property>
-     <addaction name="actionmask_"/>
-     <addaction name="separator"/>
-     <addaction name="actioncustomImprove"/>
-    </widget>
-    <widget class="QMenu" name="menumorphological_operation">
-     <property name="title">
-      <string>morphological operation</string>
-     </property>
-     <addaction name="actionerode"/>
-     <addaction name="separator"/>
-     <addaction name="actiondialate"/>
-     <addaction name="separator"/>
-     <addaction name="actionopen"/>
-     <addaction name="separator"/>
-     <addaction name="actionclose"/>
-     <addaction name="separator"/>
-     <addaction name="actionmorphological_gradient"/>
-     <addaction name="separator"/>
-     <addaction name="actiontop_hat"/>
-     <addaction name="separator"/>
-     <addaction name="actionblack_hat"/>
-    </widget>
-    <widget class="QMenu" name="menuimage_pyramid">
-     <property name="title">
-      <string>image pyramid</string>
-     </property>
-     <addaction name="actionpyrDown"/>
-     <addaction name="separator"/>
-     <addaction name="actionpyrUp"/>
-    </widget>
-    <widget class="QMenu" name="menuconvolution_operation">
-     <property name="title">
-      <string>convolution operation</string>
-     </property>
-     <widget class="QMenu" name="menurobert">
-      <property name="title">
-       <string>robert</string>
-      </property>
-      <addaction name="actionrobert_x"/>
-      <addaction name="separator"/>
-      <addaction name="actionrobert_y"/>
-     </widget>
-     <widget class="QMenu" name="menusobel">
-      <property name="title">
-       <string>sobel</string>
-      </property>
-      <addaction name="actionsobel_x"/>
-      <addaction name="separator"/>
-      <addaction name="actionsobel_y"/>
-     </widget>
-     <addaction name="menurobert"/>
-     <addaction name="separator"/>
-     <addaction name="menusobel"/>
-     <addaction name="separator"/>
-     <addaction name="actionlaplace"/>
-     <addaction name="separator"/>
-     <addaction name="actionCustomConvolution"/>
-    </widget>
-    <widget class="QMenu" name="menutransform_color_space">
-     <property name="title">
-      <string>transform color space</string>
-     </property>
-     <addaction name="actionBGR2GRAY"/>
-    </widget>
-    <widget class="QMenu" name="menuedge_detection">
-     <property name="title">
-      <string>edge detection</string>
-     </property>
-     <widget class="QMenu" name="menuscharr">
-      <property name="title">
-       <string>scharr</string>
-      </property>
-      <addaction name="actionscharr_x"/>
-      <addaction name="separator"/>
-      <addaction name="actionscharr_y"/>
-     </widget>
-     <widget class="QMenu" name="menuedge_sobel">
-      <property name="title">
-       <string>edge_sobel</string>
-      </property>
-      <addaction name="actionedge_sobel_x"/>
-      <addaction name="separator"/>
-      <addaction name="actionedge_sobel_y"/>
-     </widget>
-     <addaction name="actioncanny"/>
-     <addaction name="separator"/>
-     <addaction name="separator"/>
-     <addaction name="menuedge_sobel"/>
-     <addaction name="separator"/>
-     <addaction name="menuscharr"/>
-     <addaction name="separator"/>
-     <addaction name="actionedge_laplace"/>
-    </widget>
-    <addaction name="menutransform_color_space"/>
-    <addaction name="separator"/>
-    <addaction name="menuimprove_brightness_and_contrast"/>
-    <addaction name="separator"/>
-    <addaction name="menumorphological_operation"/>
-    <addaction name="separator"/>
-    <addaction name="menuimage_pyramid"/>
-    <addaction name="separator"/>
-    <addaction name="menuconvolution_operation"/>
-    <addaction name="separator"/>
-    <addaction name="menuedge_detection"/>
-    <addaction name="separator"/>
-    <addaction name="actioncontours"/>
-    <addaction name="separator"/>
-    <addaction name="actionconvertScaleAbs"/>
    </widget>
    <widget class="QMenu" name="menufilter">
     <property name="title">
@@ -567,9 +543,7 @@ background-color: rgb(0, 255, 255);
      <addaction name="separator"/>
      <addaction name="actionsift"/>
      <addaction name="separator"/>
-     <addaction name="separator"/>
      <addaction name="actionlbp"/>
-     <addaction name="separator"/>
      <addaction name="separator"/>
      <addaction name="actionkaze"/>
      <addaction name="separator"/>
@@ -588,15 +562,16 @@ background-color: rgb(0, 255, 255);
      <addaction name="actiongood_points"/>
     </widget>
     <addaction name="menufeature_extraction"/>
+    <addaction name="separator"/>
     <addaction name="menumatching"/>
+    <addaction name="separator"/>
     <addaction name="actionregistration"/>
    </widget>
    <addaction name="menuOpen"/>
-   <addaction name="menuPreprocessing"/>
    <addaction name="menufilter"/>
    <addaction name="menuFusion"/>
-   <addaction name="menuRegistration"/>
    <addaction name="menuSegmentation"/>
+   <addaction name="menuRegistration"/>
    <addaction name="menuAbout"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -1095,6 +1070,161 @@ background-color: rgb(0, 255, 255);
   <action name="actiongood_points">
    <property name="text">
     <string>good points</string>
+   </property>
+  </action>
+  <action name="actionwhite2black">
+   <property name="text">
+    <string>white2black</string>
+   </property>
+  </action>
+  <action name="actioncontours_2">
+   <property name="text">
+    <string>contours</string>
+   </property>
+  </action>
+  <action name="actionconvertScaleAbs_2">
+   <property name="text">
+    <string>convertScaleAbs</string>
+   </property>
+  </action>
+  <action name="actionBGR2GRAY_2">
+   <property name="text">
+    <string>BGR2GRAY</string>
+   </property>
+  </action>
+  <action name="actionmask_2">
+   <property name="text">
+    <string>mask</string>
+   </property>
+  </action>
+  <action name="actioncustomImprove_2">
+   <property name="text">
+    <string>customImprove</string>
+   </property>
+  </action>
+  <action name="actionerode_2">
+   <property name="text">
+    <string>erode</string>
+   </property>
+  </action>
+  <action name="actiondilate">
+   <property name="text">
+    <string>dilate</string>
+   </property>
+  </action>
+  <action name="actionopen_2">
+   <property name="text">
+    <string>open</string>
+   </property>
+  </action>
+  <action name="actionclose_2">
+   <property name="text">
+    <string>close</string>
+   </property>
+  </action>
+  <action name="actionmorphological_gradient_2">
+   <property name="text">
+    <string>morphological gradient</string>
+   </property>
+  </action>
+  <action name="actiontop_hat_2">
+   <property name="text">
+    <string>top hat</string>
+   </property>
+  </action>
+  <action name="actionblack_hat_2">
+   <property name="text">
+    <string>black hat</string>
+   </property>
+  </action>
+  <action name="actionpyrDown_2">
+   <property name="text">
+    <string>pyrDown</string>
+   </property>
+  </action>
+  <action name="actionpyrUp_2">
+   <property name="text">
+    <string>pyrUp</string>
+   </property>
+  </action>
+  <action name="actionrobert">
+   <property name="text">
+    <string>robert</string>
+   </property>
+  </action>
+  <action name="actionsobel">
+   <property name="text">
+    <string>sobel</string>
+   </property>
+  </action>
+  <action name="actionlaplace_2">
+   <property name="text">
+    <string>laplace</string>
+   </property>
+  </action>
+  <action name="actioncustomConvolution">
+   <property name="text">
+    <string>customConvolution</string>
+   </property>
+  </action>
+  <action name="actioncanny_2">
+   <property name="text">
+    <string>canny</string>
+   </property>
+  </action>
+  <action name="actionedge_sobel">
+   <property name="text">
+    <string>edge_sobel</string>
+   </property>
+  </action>
+  <action name="actionscharr">
+   <property name="text">
+    <string>scharr</string>
+   </property>
+  </action>
+  <action name="actionedge_laplace_2">
+   <property name="text">
+    <string>edge_laplace</string>
+   </property>
+  </action>
+  <action name="actionwhite2black_2">
+   <property name="text">
+    <string>white2black</string>
+   </property>
+  </action>
+  <action name="actionlaplace_sharpening">
+   <property name="text">
+    <string>laplace sharpening</string>
+   </property>
+  </action>
+  <action name="actionMask">
+   <property name="text">
+    <string>Mask</string>
+   </property>
+  </action>
+  <action name="actionmask_3">
+   <property name="text">
+    <string>mask</string>
+   </property>
+  </action>
+  <action name="actioncustomImproveBC">
+   <property name="text">
+    <string>customImproveBC</string>
+   </property>
+  </action>
+  <action name="actiondistanceTransform">
+   <property name="text">
+    <string>distanceTransform</string>
+   </property>
+  </action>
+  <action name="actionnormalize">
+   <property name="text">
+    <string>normalize</string>
+   </property>
+  </action>
+  <action name="actionnormalize_2">
+   <property name="text">
+    <string>normalize</string>
    </property>
   </action>
  </widget>

@@ -7,7 +7,6 @@
 #include <QDockWidget>
 #include <QDateTime>
 #include "fusion.h"
-#include "preprocessing.h"
 #include "Sgmentation.h"
 #include "registration.h"
 #include "filter.h"
@@ -119,35 +118,6 @@ MIS::MIS(QWidget *parent) :
                 }
                 );
 
-    connect(ui->actionBGR2GRAY, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionmask_, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actioncustomImprove, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionerode, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actiondialate, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionopen, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionclose, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionmorphological_gradient, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actiontop_hat, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionblack_hat, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionpyrDown, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionpyrUp, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionrobert_x, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionrobert_y, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionsobel_x, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionsobel_y, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionlaplace, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionCustomConvolution, &QAction::triggered, this, &MIS::delProcessing);    
-    connect(ui->actioncanny, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionedge_sobel_x, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionedge_sobel_y, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionscharr_x, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionscharr_y, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionedge_laplace, &QAction::triggered, this, &MIS::delProcessing);
-
-    connect(ui->actioncontours, &QAction::triggered, this, &MIS::delProcessing);
-    connect(ui->actionconvertScaleAbs, &QAction::triggered, this, &MIS::delProcessing);
-
-
     connect(ui->actionmedian_filtering, &QAction::triggered, this, &MIS::delFilter);
     connect(ui->actionmean_filtering, &QAction::triggered, this, &MIS::delFilter);
     connect(ui->actiongauss_filter, &QAction::triggered, this, &MIS::delFilter);
@@ -155,6 +125,45 @@ MIS::MIS(QWidget *parent) :
     connect(ui->actionaddWeighted, &QAction::triggered, this, &MIS::delFusion);
     connect(ui->actionmultiply, &QAction::triggered,this, &MIS::delFusion);
     connect(ui->actionadd_2, &QAction::triggered,this, &MIS::delFusion);
+
+
+    connect(ui->actionBGR2GRAY_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionmask_3, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actioncustomImproveBC, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionerode_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actiondialate, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionopen_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionclose_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionmorphological_gradient_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actiontop_hat_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionblack_hat_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionpyrDown_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionpyrUp_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionrobert_x, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionrobert_y, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionsobel_x_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionsobel_y_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionlaplace_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionCustomConvolution, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actioncanny_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionedge_sobel_x, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionedge_sobel_y, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionscharr_x, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionscharr_y, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionedge_laplace_2, &QAction::triggered, this, &MIS::delSgmentation);
+
+    connect(ui->actioncontours_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionconvertScaleAbs_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionwhite2black_2, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actiondistanceTransform, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionnormalize_2, &QAction::triggered, this, &MIS::delSgmentation);
+
+    connect(ui->actionthreshold_binary, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionthreshold_binary_Inverted, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actiontruncate, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionthreshold_to_zero, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionthreshold_to_zero_inverted, &QAction::triggered, this, &MIS::delSgmentation);
+    connect(ui->actionwatershed, &QAction::triggered, this, &MIS::delSgmentation);
 
     connect(ui->actionsurf, &QAction::triggered, this, &MIS::delRegistration);
     connect(ui->actionsift, &QAction::triggered, this, &MIS::delRegistration);
@@ -167,12 +176,6 @@ MIS::MIS(QWidget *parent) :
     connect(ui->actiongood_points, &QAction::triggered, this, &MIS::delRegistration);
     connect(ui->actionregistration, &QAction::triggered, this, &MIS::delRegistration);
 
-    connect(ui->actionthreshold_binary, &QAction::triggered, this, &MIS::delSgmentation);
-    connect(ui->actionthreshold_binary_Inverted, &QAction::triggered, this, &MIS::delSgmentation);
-    connect(ui->actiontruncate, &QAction::triggered, this, &MIS::delSgmentation);
-    connect(ui->actionthreshold_to_zero, &QAction::triggered, this, &MIS::delSgmentation);
-    connect(ui->actionthreshold_to_zero_inverted, &QAction::triggered, this, &MIS::delSgmentation);
-    connect(ui->actionwatershed, &QAction::triggered, this, &MIS::delSgmentation);
 }
 
 MIS::~MIS()
@@ -184,18 +187,9 @@ void MIS::delThreshold_spin()
 {
     action_valueChange = action;
     void (QSpinBox::*setThreshold_value)(int) = &QSpinBox::valueChanged;
-    if ("canny" == action_valueChange->text() || "contours" == action_valueChange->text())
-    {
-        void (Preprocessing::*getThreshold_value)(int) = &Preprocessing::getThres_value;
-        connect(ui->threshold_spin, setThreshold_value, &pr, getThreshold_value);
-        delProcessing();
-    }
-    else
-    {
-        void (Sgmentation::*getSe_threshold_value)(int) = &Sgmentation::getThres_value;
-        connect(ui->threshold_spin, setThreshold_value, &se, getSe_threshold_value);
-        delSgmentation();
-    }
+    void (Sgmentation::*getSe_threshold_value)(int) = &Sgmentation::getThres_value;
+    connect(ui->threshold_spin, setThreshold_value, &se, getSe_threshold_value);
+    delSgmentation();
 }
 void MIS::delAlpha_spin()
 {
@@ -244,7 +238,7 @@ void MIS::closeEvent(QCloseEvent *event)
 void MIS::loadResult(QImage res1)
 {
     ui->result->setPixmap(QPixmap::fromImage(res1));
-    ui->application_output->appendPlainText("loadResult: height:" + QString::number(res1.height(), 10) + ",width:" + QString::number(res1.width(), 10) +  ",depth:"+ QString::number(res1.depth(), 10) + ";  " + QDateTime::currentDateTime().toString("yyyy.MM.dd hh:mm:ss.zzz ddd"));
+    //ui->application_output->appendPlainText("loadResult: height:" + QString::number(res1.height(), 10) + ",width:" + QString::number(res1.width(), 10) +  ",depth:"+ QString::number(res1.depth(), 10) + ";  " + QDateTime::currentDateTime().toString("yyyy.MM.dd hh:mm:ss.zzz ddd"));
     qres = res1;
 }
 
@@ -260,7 +254,7 @@ void MIS::delSaveButton()
         cvtColor(save, save, CV_BGR2RGB);
     }
     imwrite(path1.toStdString(), save);
-    ui->application_output->appendPlainText(path1+ ";\nheight:" + QString::number(qres.height(), 10) + ",width:" + QString::number(qres.width(), 10) +  ",depth:"+ QString::number(qres.depth(), 10) + ";  " +QDateTime::currentDateTime().toString("yyyy.MM.dd hh:mm:ss.zzz ddd"));
+    ui->application_output->appendPlainText("save picture...\nheight:" + QString::number(qres.height(), 10) + ",width:" + QString::number(qres.width(), 10) +  ",depth:"+ QString::number(qres.depth(), 10) + ";  " +QDateTime::currentDateTime().toString("yyyy.MM.dd hh:mm:ss.zzz ddd"));
 }
 void MIS::on_cleanButton_clicked()
 {
@@ -367,31 +361,6 @@ void MIS::delMIS_BOX()
     ui->MIS_BOX->show();
 }
 
-int MIS::delProcessing()
-{
-    if (path1 == "")
-    {
-       QMessageBox::warning(this, "error", "please input a picture...");
-       return -1;
-    }
-    if (NULL != action_valueChange)
-    {
-        action = action_valueChange;
-    }
-    else
-    {
-        action = (QAction *)sender();
-    }
-    qDebug() << action->text();
-    preprocessing_type = action->text();
-    pr.function(path1, preprocessing_type);
-    void (Preprocessing::*m_sig)(QImage) = &Preprocessing::preprocessingSignal;
-    void (MIS::*m_slo)(QImage) = &MIS::loadResult;
-    connect(&pr, m_sig, this, m_slo);
-    pr.sendSingal_preprocessing();
-    return 0;
-}
-
 int MIS::delFilter()
 {
     if (path1 == "")
@@ -484,31 +453,7 @@ int MIS::delSgmentation()
     {
         action = (QAction *)sender();
     }
-    if ( "threshold binary" == action->text())
-    {
-        segmentation_type = 0;
-    }
-    else if ("threshold binary Inverted" == action->text())
-    {
-        segmentation_type = 1;
-    }
-    else if ("truncate" == action->text())
-    {
-        segmentation_type = 2;
-    }
-    else if ("threshold to zero" == action->text())
-    {
-        segmentation_type = 3;
-    }
-    else if ("threshold to zero inverted" == action->text())
-    {
-        segmentation_type = 4;
-    }
-    else if ("watershed" == action->text())
-    {
-        segmentation_type = 5;
-    }
-
+    segmentation_type = action->text();
     se.function(path1, segmentation_type);
     void (Sgmentation::*s_sig)(QImage) = &Sgmentation::sgmentationSignal;
     void (MIS::*s_slo)(QImage) = &MIS::loadResult;
@@ -516,4 +461,3 @@ int MIS::delSgmentation()
     se.sendSingal_sgmentation();
     return 0;
 }
-

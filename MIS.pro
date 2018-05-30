@@ -28,14 +28,12 @@ SOURCES += main.cpp\
     fusion.cpp \
     sgmentation.cpp \
     filter.cpp \
-    preprocessing.cpp \
     registration.cpp
 
 HEADERS  += mis.h \
     fusion.h \
     sgmentation.h \
     filter.h \
-    preprocessing.h \
     registration.h
 
 FORMS    += mis.ui
